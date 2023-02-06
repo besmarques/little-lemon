@@ -1,38 +1,327 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500&display=swap');
+
+:root {
+    --green: #495E57;
+    --yellow: #F4CE14;
+    --salmon: #EE9972;
+    --skin: #FBDABB;
+    --grey: #EDEFEE;
+    --dark: #333333;
+    --white: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    /*border:1px dotted red;*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h5{
+    padding:0;
+    margin:0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title{
+    font-size:64pt;
+    font-family:'Markazi Text', serif;
+    font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.subtitle{
+    font-size:40pt;
+    font-family:'Markazi Text', serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 40pt;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lead-text{
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: 'Karla';
+    max-width: 30ch;
+}
+
+.section-title{
+    font-size: 20pt;
+    font-weight: 900;
+    font-family: 'Karla';
+    text-transform: uppercase;
+}
+
+.specials{
+    font-size: 18pt;
+    font-weight: 900;
+    font-family: 'Karla';
+}
+
+.card-title{
+    font-size: 18pt;
+    font-weight: 700;
+    font-family: 'Karla';
+}
+
+p{
+    font-size: 16pt;
+    font-weight: 400;
+    font-family: 'Karla';
+    line-height: 1.5;
+    max-width: 65ch;
+}
+
+.highlight{
+    font-size: 16pt;
+    font-weight: 500;
+    font-family: 'Karla';
+}
+
+button{
+    border: 0;
+    border-radius:16pt;
+    padding:10pt 20pt;
+    min-width: 10vw;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+.container{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    align-items: center;
+}
+
+header > img{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.jcc{
+    justify-content: center;
+}
+
+.jcb{
+    justify-content: space-between;
+}
+
+.jca{
+    justify-content: space-around;
+}
+
+.three-columns{
+    display:grid;
+    grid-template-columns: repeat(3, 4fr);
+}
+
+.four-columns{
+    display:grid;
+    grid-template-columns: repeat(4, 3fr);
+}
+
+header > nav{
+    grid-column-start: 6;
+    grid-column-end: 11;
+}
+
+header > nav > menu{
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header > nav > menu > li > a{
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: 'Karla';
+    text-decoration: none;
+    color: var(--dark)
+}
+
+.hero-section{
+    background-color: var(--green);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 2vw 0vw 4vw;
+}
+
+.hero-section > :first-child {
+    grid-column-start: 3;
+    grid-column-end: span 3;
+}
+
+.hero-section > :first-child > :first-child{
+    color:var(--yellow);
+    font-size:64pt;
+    font-family:'Markazi Text', serif;
+    font-weight: 500;
+    margin: 0pt 0pt -14pt 0pt;
+}
+
+.hero-section > :first-child > :nth-child(2){
+    color:var(--white);
+    font-size:40pt;
+    font-family:'Markazi Text', serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 40pt;
+}
+
+.hero-section > :first-child > :nth-child(3){
+    color:var(--white);
+    font-size: 16pt;
+    font-weight: 400;
+    font-family: 'Karla';
+    line-height: 1.5;
+    max-width: 65ch;
+}
+
+.hero-section > :first-child > :nth-child(4){
+    background-color:var(--yellow);
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: 'Karla';
+    max-width: 30ch;
+}
+
+.hero-section > :nth-child(2) {
+    grid-column-start: 7;
+    grid-column-end: 11;
+    display: flex;
+    justify-content: end;
+    align-content: baseline;
+}
+
+.hero-section > :nth-child(2) > img{
+    width:20vw;
+    height: 26vw;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 16pt;
+}
+
+.cta-section{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw 0vw 0vw;
+}
+
+.cta-section > :nth-child(2){
+    background-color: var(--yellow);
+}
+
+
+
+
+
+.special-card{
+    background-color: var(--grey);
+    margin:0px 1vw ;
+    border-radius: 16pt;
+    overflow: hidden;
+}
+
+.special-image-box > img{
+    width:100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.price-section,
+.order-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 4vh 2vw 4vh;
+}
+
+.price{
+    color: var(--salmon)
+}
+
+.special-card > description {
+    padding: 0vh 2vw;
+    display:block;
+    min-height: 22vh;
+}
+
+
+
+.testimonials-section{
+    padding: 10vh 0vw;
+}
+
+.star{
+    width: 2vw;
+    height: 2vw;
+}
+
+.review-card{
+    background-color: var(--grey);
+    margin:0px 1vw;
+    padding: 1vw;
+    border-radius: 16pt;
+}
+
+.stars-section{
+    display:flex;
+    justify-content: center;
+    padding: 0vw 0vw 1vw;
+}
+
+.reviewer-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 0vw 1vw;
+}
+
+.reviewer-photo{
+    width:50%;
+    justify-content: start;
+}
+
+.reviewer-name{
+    width:50%;
+    justify-content: center;
+}
+
+footer{
+    background-color: var(--grey);
+    padding:10vh 0vw;
+}
+
+footer > div > div > div > nav > menu > li > a{
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: 'Karla';
+    text-decoration: none;
+    color: var(--dark)
+}
+
+footer > div > div > div > nav > menu {
+    list-style-type: none;
+}
+
+
+@media (max-width: 480px) {
+    .three-columns{
+        display:grid;
+        grid-template-columns: repeat(1, 12fr);
+    }
+    .four-columns{
+        display:grid;
+        grid-template-columns: repeat(1, 12fr);
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px){
+    .three-columns{
+        display:grid;
+        grid-template-columns: repeat(1, 12fr);
+    }
+    .four-columns{
+        display:grid;
+        grid-template-columns: repeat(2, 6fr);
+    }
 }
