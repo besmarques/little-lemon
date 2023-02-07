@@ -17,32 +17,32 @@ const Footer = () => {
 					<div className="footer-column">
 						<h5 className="section-title">Contact</h5>
 						<p className="lead-text">
-							<i class="fa-solid fa-location-dot"></i> 2395
+							<i className="fa-solid fa-location-dot"></i> 2395
 							Maldove Way
 							<br />
 							Chicago, Illinois
 						</p>
 						<p className="lead-text">
-							<i class="fa-solid fa-phone"></i>{" "}
+							<i className="fa-solid fa-phone"></i>{" "}
 							<a href="tel:(629)-000-0000">(629)-000-0000</a>
 						</p>
 						<p className="lead-text">
-							<i class="fa-solid fa-envelope"></i>{" "}
+							<i className="fa-solid fa-envelope"></i>{" "}
 							<a href="mailto:name@email.com">Contact us</a>
 						</p>
 					</div>
 					<div className="footer-column">
 						<h5 className="section-title">Social media</h5>
 						<p className="lead-text">
-							<i class="fa-brands fa-facebook"></i>{" "}
+							<i className="fa-brands fa-facebook"></i>{" "}
 							<a href="">facebook</a>
 						</p>
 						<p className="lead-text">
-							<i class="fa-brands fa-linkedin"></i>{" "}
+							<i className="fa-brands fa-linkedin"></i>{" "}
 							<a href="">linkedin</a>
 						</p>
 						<p className="lead-text">
-							<i class="fa-brands fa-instagram"></i>{" "}
+							<i className="fa-brands fa-instagram"></i>{" "}
 							<a href="">instagram</a>
 						</p>
 					</div>

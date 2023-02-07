@@ -11,8 +11,8 @@ const TestimonialCard = (props) => {
 	return (
 		<article className="review-card">
 			<section className="stars-section">
-				{starArray.map((item) => {
-					return <img src={Star} alt="star rating" className="star" />;
+				{starArray.map((key, item) => {
+					return <img key={key} src={Star} alt="star rating" className="star" />;
 				})}
 			</section>
 			<section className="reviewer-section">
@@ -23,9 +23,9 @@ const TestimonialCard = (props) => {
                     <p className="card-title">{props.name}</p>
                 </div>
 			</section>
-			<review>
+			<div className="review">
                 <p>{props.review}</p>
-            </review>
+            </div>
 		</article>
 	);
 };

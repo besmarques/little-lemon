@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500&display=swap');
 
+
 :root {
     --green: #495E57;
     --yellow: #F4CE14;
@@ -10,10 +11,11 @@
     --white: #ffffff;
 }
 
-*{
-    /*border:1px dotted red;*/
-}
 
+*{
+    border:1px dotted red;
+}
+ /*
 h5{
     padding:0;
     margin:0;
@@ -92,11 +94,6 @@ button{
     align-items: center;
 }
 
-header > img{
-    grid-column-start: 3;
-    grid-column-end: 5;
-}
-
 .jcc{
     justify-content: center;
 }
@@ -109,6 +106,7 @@ header > img{
     justify-content: space-around;
 }
 
+
 .three-columns{
     display:grid;
     grid-template-columns: repeat(3, 4fr);
@@ -119,6 +117,11 @@ header > img{
     grid-template-columns: repeat(4, 3fr);
 }
 
+header > img{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
 header > nav{
     grid-column-start: 6;
     grid-column-end: 11;
@@ -126,7 +129,7 @@ header > nav{
 
 header > nav > menu{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style-type: none;
 }
 
@@ -137,6 +140,10 @@ header > nav > menu > li > a{
     text-decoration: none;
     color: var(--dark)
 }
+
+header > nav > menu > :last-child {
+    display: none;
+  }
 
 .hero-section{
     background-color: var(--green);
@@ -239,13 +246,11 @@ header > nav > menu > li > a{
     color: var(--salmon)
 }
 
-.special-card > description {
+.special-card > .description {
     padding: 0vh 2vw;
     display:block;
     min-height: 22vh;
 }
-
-
 
 .testimonials-section{
     padding: 10vh 0vw;
@@ -313,6 +318,33 @@ footer > div > div > div > nav > menu {
         display:grid;
         grid-template-columns: repeat(1, 12fr);
     }
+
+    .specials-title{
+        width:100%;
+    }
+
+    .special-card,
+    .review-card{
+        margin:2vw 0vw;
+    }
+
+    .hero-section > :first-child,
+    .hero-section > :nth-child(2){
+        display:grid;
+        grid-column-start: 3;
+        grid-column-end: 11;
+    }
+
+    .hero-section > :nth-child(2) > img{
+        width:100%;
+        height: auto;
+        position:relative;
+        object-fit: cover;
+        border-radius: 16pt;
+    }
+    .cta-section{
+        display:grid;
+    }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 481px){
@@ -325,3 +357,5 @@ footer > div > div > div > nav > menu {
         grid-template-columns: repeat(2, 6fr);
     }
 }
+
+*/

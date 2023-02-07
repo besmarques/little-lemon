@@ -3,22 +3,22 @@ import Scooter from "../Media/scooter.svg"
 
 const SpecialArticle = (props) => {
     return(
-        <card className="special-card">
-            <imageBox className="special-image-box">
+        <div className="special-card">
+            <div className="special-image-box">
                 <img src={props.image} alt={props.alt} width="100%"/>
-            </imageBox>
+            </div>
             <section className="price-section">
-                <dish className="card-title">{props.title}</dish>
-                <price className="lead-text price">${props.price}</price>
+                <div className="card-title">{props.title}</div>
+                <div className="lead-text price">${props.price}</div>
             </section>
-            <description>
+            <section className="description">
                 <p>{props.description}</p>
-            </description>
+            </section>
             <section className="order-section">
-                <delivery className="card-title">Order a delivery</delivery>
+                <div className="card-title">Order a delivery</div>
                 <img src={Scooter} alt="order delivery scooter" width="40vw"/>
             </section>
-        </card>
+        </div>
     )
 }
 export default SpecialArticle
