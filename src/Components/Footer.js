@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../Media/footer-logo.png";
-import Nav from "./Nav";
+
 
 const Footer = () => {
 	return (
@@ -12,7 +12,6 @@ const Footer = () => {
 					</div>
 					<div className="footer-column">
 						<h5 className="section-title">Menu</h5>
-						<Nav />
 					</div>
 					<div className="footer-column">
 						<h5 className="section-title">Contact</h5>

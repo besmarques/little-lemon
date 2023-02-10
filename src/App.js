@@ -7,20 +7,17 @@ import Specials from "./Components/Specials";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
 
-import Teste from "./Components/teste";
-
 function App() {
 	return (
 		<>
-			<Teste />
-			{/*<Header />
+			<Header />
 			<main>
 				<Hero />
-				<Cta />
+				{/*<Cta />
 				<Specials />
-				<Testimonials />
+				<Testimonials />*/}
 			</main>
-	<Footer />*/}
+	{/*<Footer />*/}
 		</>
 	);
 }
