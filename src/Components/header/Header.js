@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../Media/Logo.svg";
+import Logo from "../../Media/Logo.svg";
 
 const Header = () => {
 	const [showNavMenuDropdown, setShowNavMenuDropdown] = useState("show");

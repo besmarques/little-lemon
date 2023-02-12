@@ -1,5 +1,5 @@
 import React from "react";
-import Scooter from "../Media/scooter.svg"
+import Scooter from "../../Media/scooter.svg"
 
 const SpecialArticle = (props) => {
     return(

@@ -1,5 +1,5 @@
 import React from "react";
-import Star from "../Media/star.png";
+import Star from "../../Media/star.png";
 
 const TestimonialCard = (props) => {
 	let starArray = [];

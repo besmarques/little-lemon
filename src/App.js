@@ -1,23 +1,23 @@
 import "./App.css";
 
-import Header from "./Components/Header";
-import Hero from "./Components/Hero";
-import Cta from "./Components/Cta";
-import Specials from "./Components/Specials";
-import Testimonials from "./Components/Testimonials";
-import Footer from "./Components/Footer";
+import Header from "./Components/header/Header";
+import Hero from "./Components/Hero/Hero";
+import Cta from "./Components/Cta/Cta";
+import Specials from "./Components/Specials/Specials";
+import Testimonials from "./Components/Testimonials/Testimonials"
+import Footer from "./Components/Footer/Footer";
 
 function App() {
 	return (
 		<>
 			<Header />
-			<main>
+			{/*<main>
 				<Hero />
-				{/*<Cta />
+				<Cta />
 				<Specials />
-				<Testimonials />*/}
-			</main>
-	{/*<Footer />*/}
+				<Testimonials />
+			</main>*/}
+	<Footer />
 		</>
 	);
 }

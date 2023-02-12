@@ -1,0 +1,120 @@
+footer{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 3;
+    grid-row-end: -1;
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+footer > :nth-child(1){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > :nth-child(2){
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+footer > :nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+footer > :nth-child(4){
+    grid-column-start: 5;
+    grid-column-end: 6;
+
+}
+
+
+@media only screen and (max-width: 768px) and (min-width: 481px){
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    footer > * {
+        padding: 2vh 0vh;
+        display:flex;
+        flex-direction: column;
+        align-self: start;
+    }
+    
+    footer > :nth-child(1){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    footer > :nth-child(2){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    footer > :nth-child(3){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+    }
+
+    footer > :nth-child(4){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    footer > * {
+        padding: 2vh 0vh;
+        display:flex;
+        align-self: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer > :nth-child(1){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    footer > :nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    footer > :nth-child(3){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    footer > :nth-child(4){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+    }
+
+}

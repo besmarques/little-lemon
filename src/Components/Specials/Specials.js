@@ -1,9 +1,9 @@
 import React from "react";
 
 import SpecialsCard from "./SpecialsCard";
-import GreekSalad from "../Media/greek-salad.jpg";
-import Bruchetta from "../Media/bruchetta.svg";
-import LemonDessert from "../Media/lemon-dessert.jpg";
+import GreekSalad from "../../Media/greek-salad.jpg";
+import Bruchetta from "../../Media/bruchetta.svg";
+import LemonDessert from "../../Media/lemon-dessert.jpg";
 
 const Specials = () => {
 	return (

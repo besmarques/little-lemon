@@ -12,9 +12,33 @@
 }
 
 
-*{
-    border:1px dotted red;
-}*
+
+#root{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, fr);
+}
+
+header{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+}
+
+main{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, fr);
+    background-color:blue;
+}
+
+
 
 h5{
     padding:0;
@@ -79,6 +103,12 @@ p{
     font-family: 'Karla';
 }
 
+button{
+    border: 0;
+    border-radius:16pt;
+    padding:10pt 20pt;
+}
+
 button.content{
     border: 0;
     border-radius:16pt;
@@ -101,6 +131,7 @@ button.hamburguer.clicked{
     content: " ";
 }
 
+/*
 header,
 .hero-section{
     display: grid;
@@ -211,59 +242,47 @@ header button{
 
 
 /*hero section*/
-.hero{
-    background-color: var(--green);
+.hero-section{
+    /*background-color: var(--green);*/
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: 40vw 30vw;
+    padding:2vw 15vw;
 }
 
-.hero > .container{
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 11;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(7,1fr);
-}
-
-.hero > .container > .item:nth-child(n+16) {
-    background-color: yellow;
-  }
-
-.hero > .container > .hero-column-left {
-    
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 7;
-}
-
-.hero > .container > .hero-column-right {
-  
-    grid-column-start: 6;
-    grid-column-end: -1;
-    grid-row-start: 2;
-    grid-row-end: -1;
-}
-
-.hero .title{
+.hero-title{
     color:var(--yellow);
+    margin: 0pt 0pt -14pt 0pt;
 }
 
-.hero .subtitle{
+.hero-subtitle,
+.hero-text{
     color:var(--white);
 }
 
-.hero p{
-    
+.hero-img > img{
+    width:30vw;
+    height: 28vw;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 16pt;
 }
 
-.hero img{
-    grid-column-start: 3;
-
-    grid-row-end: -1;
-
+.hero-button,
+.specials-button{
+    background-color: var(--yellow);
+    color: var(--dark);
 }
 
+@media only screen and (max-width: 768px) and (min-width: 481px){
+    .hero-section{
+        background-color: var(--green);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 40vw 30vw;
+        padding:2vw 15vw;
+    }
+}
+@media (max-width: 480px) {}
 
  /*
 
