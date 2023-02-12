@@ -11,7 +11,9 @@
     --white: #ffffff;
 }
 
-
+*{
+    border: 1px dotted red;
+}
 
 #root{
     display:grid;
@@ -108,138 +110,6 @@ button{
     border-radius:16pt;
     padding:10pt 20pt;
 }
-
-button.content{
-    border: 0;
-    border-radius:16pt;
-    padding:10pt 20pt;
-    min-width: 10vw;
-}
-
-button.hamburguer{
-    border:0px;
-    height: 8vw;
-    width: 8vw;
-    border-radius: 16px;
-    font-size: 18pt;
-    font-weight: 500;
-    justify-self: end;
-}
-
-button.hamburguer.clicked{
-    background-color: var(--yellow);
-    content: " ";
-}
-
-/*
-header,
-.hero-section{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    padding: 1vw 0vw;
-}
-
-header > .container{
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 11;
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
-}
-
-header img{
-    width:100%;
-}
-
-menu{
-    display: grid;
-    grid-template-columns: repeat(6,auto);
-    font-size: 18pt;
-    font-weight: 500;
-    font-family: 'Karla';
-    list-style-type: none;
-}
-
-menu > li {
-    justify-self: center;
-}
-
-header button{
-    display:none;
-}
-
-@media only screen and (max-width: 768px) and (min-width: 481px){
-    header{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        padding: 0vw 1vw;
-    }
-
-    header button{display:block;}
-
-    .container{
-        display: grid;
-        grid-column-start: 1;
-        grid-column-end: -1;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    nav{
-        display: grid;
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-
-    menu{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6,1fr);
-        justify-content: space-evenly;
-        justify-items: space-evenly;
-    }
-}
-
-@media (max-width: 480px) {
-    header{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-    }
-
-    header button{
-        display:block;
-    }
-
-    .container{
-        display: grid;
-        grid-column-start: 1;
-        grid-column-end: -1;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(1,1fr);
-    }
-
-    nav{
-        display: grid;
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-
-    menu{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6,1fr);
-        justify-content: space-evenly;
-        justify-items: space-evenly;
-        margin:0;
-        padding: 0;
-    }
-}
-
-.hidden{
-    display:none;
-}
-
 
 /*hero section*/
 .hero-section{

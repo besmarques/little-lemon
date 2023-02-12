@@ -1,50 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Logo from "../../Media/Logo.svg";
+import "./Header.css";
 
 const Header = () => {
-	const [showNavMenuDropdown, setShowNavMenuDropdown] = useState("show");
-
-    const [buttonState, setButtonState] = useState("unclicked")
-
-	const [windowSize, setWindowSize] = useState([
-		window.innerWidth,
-		window.innerHeight,
-	]);
+	const windowWidth = useRef(window.innerWidth);
+	const [show, setShow] = useState();
 
 	useEffect(() => {
-		const handleWindowResize = () => {
-			setWindowSize([window.innerWidth, window.innerHeight]);
-		};
-
-		window.addEventListener("resize", handleWindowResize);
-
-		return () => {
-			window.removeEventListener("resize", handleWindowResize);
-		};
-	});
-
-	useEffect(() => {
-		if (windowSize[0] > 768) {
-			setShowNavMenuDropdown("show");
+		if (windowWidth.current > 768) {
+			setShow(true);
 		} else {
-			setShowNavMenuDropdown("hidden");
+			setShow(false);
 		}
-	}, [window.screen.width]);
+	}, []);
+
+	const showMenu = () => {
+		setShow(!show);
+	};
 
 	return (
 		<header>
-			<div className="container">
-				<img src={Logo} />
-				<button className="hamburguer"
-					onClick={() => {
-						showNavMenuDropdown == "show"
-							? setShowNavMenuDropdown("hidden")
-							: setShowNavMenuDropdown("show");
-					}}>
-					<i class="fa-solid fa-bars"></i>
-				</button>
+			<img src={Logo} />
+			<button
+				onClick={() => {
+					showMenu();
+				}}>
+				<i class="fa-solid fa-bars"></i>
+			</button>
+			{show == true ? (
 				<nav>
-					<menu className={showNavMenuDropdown} >
+					<menu>
 						<li>
 							<a hred="#">Home</a>
 						</li>
@@ -65,7 +50,9 @@ const Header = () => {
 						</li>
 					</menu>
 				</nav>
-			</div>
+			) : (
+				""
+			)}
 		</header>
 	);
 };

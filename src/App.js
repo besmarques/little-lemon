@@ -16,8 +16,8 @@ function App() {
 				<Cta />
 				<Specials />
 				<Testimonials />
-			</main>*/}
-	<Footer />
+			</main>
+	<Footer />*/}
 		</>
 	);
 }
